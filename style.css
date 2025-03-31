@@ -1,443 +1,530 @@
-/* Global Styles */
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: rgb(2, 2, 2);
 }
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Iansui&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.navbar{ padding: 0;}
 
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10px;
-    background: #0e0d0d;
-    box-shadow: 0px 4px 6px rgb(124, 122, 122);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+.Brand{
+    text-decoration:underline;
 
-.logo {
-    font-size: 24px;
     font-weight: bold;
-    color: #e7e1e1;
-    font-family: "Big Shoulders Inline", sans-serif;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #d6cccc;
-    font-size: 30px;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: #ff6600;
-}
-
-/* CTA Button */
-.cta-button {
-    padding: 8px 15px;
-    background: beige;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-    background: #cc5500;
-    color: white;
-}
-
-/* General Parallax Section */
-.parallax-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-
-}
-
-/* First Parallax Background */
-.first-parallax .parallax-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('trevor-bobyk-vd_TGp0QiLU-unsplash.jpg') center/cover no-repeat;
-    z-index: -1;
-}
-
-/* Second Parallax Background */
-.second-parallax .parallax-img {
+    font-size: 1.5rem;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('kenny-eliason-XEsx2NVpqWY-unsplash.jpg') center/cover no-repeat;
-    z-index: -1;
+    top: 10px;
+    left: 45%;
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+     color:yellowgreen;
+     display: inline-block;
+
+     
 }
-
-/* Welcome Text */
-.welcome-text  {
-    font-size: 38px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 20px;
-    color: #222;
-}
-
-
-
-  .about {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(135deg, #1e1e1e, #0e0c0c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-.about-content {
-    max-width: 800px;
-    text-align: center; 
-}
-
-.about-text {
-    color: #f0f0f0;
-    font-size: 24px;
-    line-height: 1.6;
-    font-family: "Kanit", sans-serif;
-    max-width: 90vw;
-}
-
-.about h2 {
-    font-size: 40px;
-    color: #ff6f61;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.about h2::after {
+.Brand::after{
     content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #ff6f61;
-    margin: 10px auto 0;
-}
-
-.about p {
-    font-size: 18px;
-    color: #bbb;
-}
-
-.contact-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #ff6f61;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.contact-btn:hover {
-    background: #e25b50;
-    transform: scale(1.05);
-}
-
-
-
-.space{
-    width: 100%;
-    height: 100%;
     position: absolute;
-}
-
-/* Down Arrow Animation */
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(20px); }
-}
-
-.down-arrow img {
-    cursor: pointer;
-    animation: bounce 3s infinite;
-    width: 50px;
-    margin-top: 20px;
-}
-
-.down-arrow {
-    display: flex;
-    justify-content: center;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
-.project-list{padding: 0;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-margin: auto;
-grid-template-columns: (300px, 1fr);
-gap: 20px;
-max-width: 1200px;
-margin: auto;
-}
-.project{
-background:rgb(8, 8, 8);
-border-radius: 12px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-padding: 20px;
-height: 400px;
-text-align: center;
-transition: transform 0.3 ease;
-flex-direction: column;
-}
-.project-content{ position: absolute;
-    text-align: center;
-    justify-content: center;
-    font-size: 28px;
-    font-family: "Rowdies", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    transition: 1s;
-    border-radius: 20px;
-    color: #f3eded;
-    bottom: 0;
-    padding-top: 50px;
-   
-}
-.project:hover {
-transform: translateY(-5px);
-}
-
-.project img{width: 100%;
-height: 150px;
-object-fit: cover;
-border-radius: 8px;
-
-
-}
-.project h3{
-margin: 15px 0px 10px;
-font-size: 1.4rem;
-color: white;
-
-}
-.project p{
-font-size: 0.95rem;
-color: #555;
-padding: 10px;
-}
-
-.project a{
-color: #e7e1e1;
-font-size: 20px;
-}
-
-
-footer {
-    background: #fff;
-    color: black;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
+    left: 0;
+    bottom: 5px;
     width: 100%;
+    height: 10px;
+    background: gray;
+    z-index:-1;
+    
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
+nav {display: flex;
+    font-size: 1.5rem;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    color: white;
+    padding: 10px 20px;
+ }
+ 
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.footer-content p {
-    margin: 0;
+/* nav button {
+    background-color: yellowgreen;
+    color: Black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+nav button:hover {
+     background-color: grey;
+     
+     
+} 
+
+.Hire-me{
+    background-color: yellowgreen;
     font-size: 20px;
+    font-weight: bold;
+    color: black;
+    border: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: transform 0.3s ease;
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.Hire-me::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 95%;
+    height: 95%;
+    background:gray;
+    z-index: -1;
+    opacity: 0.5;
+
 }
 
-.social-icons {
+/* hero section */
+
+.Brand-Name{  color:yellowgreen;
+text-decoration: underline
+;}
+
+.hero{
+    height: 100vh;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    
 }
 
-.social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+.hero-text{
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    top: -30%;
 }
-
-.social-icons a img:hover {
-    transform: scale(1.1);
+.hero-text h1{
+    font-size: 2rem;
+    font-weight: bold;
+    
+    color: white;
 }
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .parallax-section {
-        height: 60vh;
-    }
-
-    .about-text {
-        font-size: 20px;
-        max-width: 90%;
-    }
-
-    .project-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .project img {
-        height: 120px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
+.hero-text p{
+    font-size: 2.7rem;
+    color: yellowgreen;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
 }
 
 
-/* updated  */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        display: none; /* Hide menu initially */
-    }
 
-    .nav-links.active {
-        display: flex; /* Show when toggled */
-    }
 
-    .cta-button {
-        margin-top: 10px;
-    }
+/* eg. */
+#why-me {
+    text-align: center;
+    padding: 50px;
+    background: yellowgreen;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#why-me h2 {
+    margin-bottom: 10%; /* Adjust as needed */
+    background-color: yellowgreen;
+    color: black;
+    font-size: 2.5rem;
+
 }
 
+.why-me-description1{
+    font-size: 1.9rem;
+    color: black;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+.why-me-description1 strong{
+    color: black;
+    font-size: 3rem;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+.why-me-description2{
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+
+
+.why-me-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    background-color: yellowgreen;
+}
+
+.anime-character {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 280px;
+    height: auto;
+    z-index: 1;
+    background-color: yellowgreen;
+}
+
+.box {
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+
+
+    
+    
+    background-color:black;
+    
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+}
+
+
+.box1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.box2 { grid-column: 3 / 4; grid-row: 1 / 2; }
+.box3 { grid-column: 1 / 2; grid-row: 3 / 4; }
+.box4 { grid-column: 3 / 4; grid-row: 3 / 4; }
+
+
+/* My work */
+#my-work {
+    text-align: center;
+    padding: 80px 50px;
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+}
+
+#my-work h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: "Tektur", sans-serif;
+    background-color: black;
+    color: yellowgreen;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    background-color: black;
+    color: yellowgreen;
+}
+
+.project {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    font-family: "Tektur", sans-serif;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.live-demo, .github-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.live-demo {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.github-link {
+    background-color: #333;
+    color: white;
+}
+
+.live-demo:hover {
+    background-color: #e6b800;
+}
+
+.github-link:hover {
+    background-color: #555;
+}
 
 /* contact */
-body {
-    font-family: Arial, sans-serif;
+#contact {
     text-align: center;
-    background: #0d0d0d;
-    color: white;
-    margin: 0;
-    padding: 0;
+    padding: 80px 50px;
+    background-color:black;
+    color:yellowgreen;
+    min-height: 100vh;
 }
 
-header {
-    padding: 20px;
-    font-size: 24px;
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "Tektur", sans-serif;
+    background-color: black;
+    color:yellowgreen;
 }
 
-.contact-form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: yellowgreen;
+    background-color: black;
 }
 
 form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    text-align: left;
+    max-width: 500px;
+    margin: auto;
+    background-color: black;
+    color: white;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: none;
+    margin: 10px 0;
     border-radius: 5px;
-    background: #333;
+    border: none;
+    font-size: 1rem;
+    color:black;
+    background-color: yellowgreen;
+}
+
+textarea {
+    height: 150px;
+    background-color: yellowgreen;
     color: white;
 }
 
 button {
-    padding: 10px;
-    background: #ff4500;
-    color: white;
+    background-color: black;
+    color: yellowgreen;
+    padding: 10px 15px;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
     border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 button:hover {
-    background: #ff5c33;
+    background-color: #e6b800;
 }
 
-footer {
+.contact-links {
     margin-top: 20px;
+    background-color: yellowgreen;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 10px;
+    color:black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: yellowgreen;
+}
+
+.contact-links a img{
+    background-color: yellowgreen;
+    width: 32px;
+}
+.contact-links a:hover {
+    color: #e6b800;
 }
 
 
 
+/* Games */
 
+#my-games {
+    text-align: center;
+    padding: 80px 50px;
+    background-color: yellowgreen;
+    color:black;
+    min-height: 100vh;
+}
 
+#my-games h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "Tektur", sans-serif;
+    background-color: yellowgreen;
+    color: black;
+    
+}
 
+#my-games p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: black;
+    background-color: yellowgreen;
+    
+}
 
+/* Container */
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: yellowgreen;
+    color: black;
+}
 
+/* Game Cards */
+.game-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+/* Preview Frame */
+.game-frame {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+    background: #000;
+}
+
+/* Links */
+.game-links {
+    margin-top: 10px;
+}
+
+.game-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.game-links a:hover {
+    background: #e6b800;
+}
+
+/* footer */
+footer {
+    background: #1c1e22;
+    color: yellow;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {background: #1c1e22;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    background: #1c1e22;
+}
+
+.email-icon {
+    font-size: 1.5rem;
+    border: 2px solid yellow;
+    background: #1c1e22;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+a {
+    color: yellow;
+    background: #1c1e22;
+    text-decoration: none;
+}
+
+hr {
+    width: 80%;
+    border: 1px solid yellow;
+    background: #1c1e22;
+    margin: 10px auto;
+}
+p{
+    background: #1c1e22;
+}
 
 
 
